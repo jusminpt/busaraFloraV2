@@ -59,11 +59,13 @@ body{
     left:50%;
     /* not relative with parent */
     transform: translate(-50%,-50%); /*this will shift the text itself, not from the position*/
+    text-align: center;
 }
 
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 60px;
 
     /* hide the back of the img when tranfrom, 
     but in this case we use it for fix the heading shaking issue */
@@ -125,6 +127,73 @@ body{
         opacity: 1;
         transform: translate(0); /*back to original*/
     }
+}
+
+@keyframes moveInButtom{
+    /* start */
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    /* finish */
+    100%{
+        opacity: 1;
+        transform: translate(0); /*back to original*/
+    }
+}
+
+/* reset the default of link propety */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s; /*apply all funtion*/
+    position: relative; /*to be a parent for btn animation*/
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /*x y blur color*/
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; /*fading-out*/
+}
+
+.btn-animated{
+    animation: moveInButtom .5s ease-out .75s;
+    animation-fill-mode: backwards; /*use animation from end->start*/
 }
 /* End Header */
 
