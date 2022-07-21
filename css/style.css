@@ -8,20 +8,29 @@ Dark green: #28b485
 */
 
 /* reset : make it the same across platform */
-*{
+*,
+*::before,
+*::after{
     /* start clean */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit; /* make every element to auto inherit to box-sizing(body) */
+}
+
+html{
+    /*default font-size to 10px
+    the user can zoom-in or out without changing the look of website*/
+    font-size: 62.5%; 
 }
 
 body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 /* End reset */
@@ -44,12 +53,12 @@ body{
 
 .logo-box{
     position: absolute; /*child element from header*/
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo{
-    height: 35px; /*width will adjust accordingly*/
+    height: 3.5rem; /*width will adjust accordingly*/
 }
 
 .text-box{
@@ -65,7 +74,7 @@ body{
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 
     /* hide the back of the img when tranfrom, 
     but in this case we use it for fix the heading shaking issue */
@@ -74,9 +83,9 @@ body{
 
 .heading-primary-main{
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 700;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     /* add animation */
     animation: moveInLeft 1s ease-out;
@@ -87,9 +96,9 @@ body{
 
 .heading-primary-sub{
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
-    letter-spacing: 17.5px;
+    letter-spacing: 1.75rem;
 
     /* add animation */
     animation-name: moveInRight;
@@ -101,10 +110,10 @@ body{
     /* start */
     0%{
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80%{
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
     /* finish */
     100%{
@@ -117,10 +126,10 @@ body{
     /* start */
     0%{
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80%{
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
     /* finish */
     100%{
@@ -133,7 +142,7 @@ body{
     /* start */
     0%{
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
     /* finish */
     100%{
@@ -145,23 +154,24 @@ body{
 /* reset the default of link propety */
 .btn:link,
 .btn:visited {
+    font-size: 1.6rem;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s; /*apply all funtion*/
     position: relative; /*to be a parent for btn animation*/
 }
 
 .btn:hover{
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /*x y blur color*/
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2); /*x y blur color*/
 }
 
 .btn:active{
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
 }
 
 .btn-white{
@@ -174,7 +184,7 @@ body{
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -193,7 +203,7 @@ body{
 
 .btn-animated{
     animation: moveInButtom .5s ease-out .75s;
-    animation-fill-mode: backwards; /*use animation from end->start*/
+    animation-fill-mode: backwards; /*use animation from end->start*/ 
 }
 /* End Header */
 
