@@ -36,9 +36,48 @@ body{
         url(../img/hero.jpg);
     background-size: cover; /* try to fit in the element of this box */
     background-position: top;
+    position: relative; /*origin position for logo*/
 
     /* clip the img*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*define 4 conner of img(x y axis)*/
+}
+
+.logo-box{
+    position: absolute; /*child element from header*/
+    top: 40px;
+    left: 40px;
+}
+
+.logo{
+    height: 35px; /*width will adjust accordingly*/
+}
+
+.text-box{
+    position: absolute;
+    /* relative with parent */
+    top:40%;
+    left:50%;
+    /* not relative with parent */
+    transform: translate(-50%,-50%); /*this will shift the text itself, not from the position*/
+}
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 17.5px;
 }
 /* End Header */
 
