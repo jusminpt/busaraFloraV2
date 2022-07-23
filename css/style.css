@@ -36,26 +36,23 @@ body {
   /* clip the img*/
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /*define 4 conner of img(x y axis)*/ }
-
-.header__logo-box {
-  position: absolute;
-  /*child element from header*/
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem;
-  /*width will adjust accordingly*/ }
-
-.header__text-box {
-  position: absolute;
-  /* relative with parent */
-  top: 40%;
-  left: 50%;
-  /* not relative with parent */
-  transform: translate(-50%, -50%);
-  /*this will shift the text itself, not from the position*/
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    /*child element from header*/
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem;
+    /*width will adjust accordingly*/ }
+  .header__text-box {
+    position: absolute;
+    /* relative with parent */
+    top: 40%;
+    left: 50%;
+    /* not relative with parent */
+    transform: translate(-50%, -50%);
+    /*this will shift the text itself, not from the position*/
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -64,26 +61,24 @@ body {
   /* hide the back of the img when tranfrom, 
     but in this case we use it for fix the heading shaking issue */
   /* backface-visibility: hidden; */ }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 700;
-  letter-spacing: 3.5rem;
-  /* add animation */
-  animation: moveInLeft 1s ease-out;
-  /* animation-delay: 2s; */
-  /* animation-iteration-count: 3; */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.75rem;
-  /* add animation */
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 3.5rem;
+    /* add animation */
+    animation: moveInLeft 1s ease-out;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: 3; */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    /* add animation */
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
 
 @keyframes moveInLeft {
   /* start */
@@ -122,56 +117,49 @@ body {
     transform: translate(0);
     /*back to original*/ } }
 
-/* reset the default of link propety */
-.btn:link,
-.btn:visited {
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all .2s;
-  /*apply all funtion*/
-  position: relative;
-  /*to be a parent for btn animation*/ }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  /*x y blur color*/ }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-  /*fading-out*/ }
-
-.btn--animated {
-  animation: moveInButtom .5s ease-out .75s;
-  animation-fill-mode: backwards;
-  /*use animation from end->start*/ }
+.btn {
+  /* reset the default of link propety */ }
+  .btn:link, .btn:visited {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    /*apply all funtion*/
+    position: relative;
+    /*to be a parent for btn animation*/ }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    /*x y blur color*/ }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+      /*fading-out*/ }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; }
+  .btn--animated {
+    animation: moveInButtom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+    /*use animation from end->start*/ }
 
 /* End Header */
