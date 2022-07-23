@@ -1,0 +1,20 @@
+/* reset : make it the same across platform */
+*,
+*::before,
+*::after{
+    /* start clean */
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /* make every element to auto inherit to box-sizing(body) */
+}
+
+html{
+    /*define 1rem font-size to 10px
+    the user can zoom-in or out without changing the look of website*/
+    font-size: 62.5%; 
+}
+
+body{
+    box-sizing: border-box;
+}
+/* End reset */

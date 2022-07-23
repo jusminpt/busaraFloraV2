@@ -1,0 +1,37 @@
+/* Header */
+.header{
+    height: 95vh; /* set the height to be 95% of viewport */
+    background-image: linear-gradient(
+        150deg,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url(../img/hero.jpg);
+    background-size: cover; /* try to fit in the element of this box */
+    background-position: top;
+    position: relative; /*origin position for logo*/
+
+    /* clip the img*/
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*define 4 conner of img(x y axis)*/
+
+    &__logo-box{
+        position: absolute; /*child element from header*/
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo{
+        height: 3.5rem; /*width will adjust accordingly*/
+    }
+    
+    &__text-box{
+        position: absolute;
+        /* relative with parent */
+        top:40%;
+        left:50%;
+        /* not relative with parent */
+        transform: translate(-50%,-50%); /*this will shift the text itself, not from the position*/
+        text-align: center;
+    }
+}
+
+/* End Header */
