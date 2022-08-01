@@ -7,16 +7,18 @@
     margin-top: -20vh;
 }
 .heading__row{
-    flex:1;
     display: flex;
+    width: 100%;
+    height: 100%;
     justify-content: space-evenly;
 
+    & > *{
+        flex: 0 0 35%;
+    } 
+
     &-detail{
-        width: 50%;
-        background-color: aqua;
     }
     &-img{
-        width: 50%;
-        background-color: red;
+        position: relative;
     }
 }
