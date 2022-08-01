@@ -1,0 +1,22 @@
+.section-about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+}
+.heading__row{
+    flex:1;
+    display: flex;
+    justify-content: space-evenly;
+
+    &-detail{
+        width: 50%;
+        background-color: aqua;
+    }
+    &-img{
+        width: 50%;
+        background-color: red;
+    }
+}
