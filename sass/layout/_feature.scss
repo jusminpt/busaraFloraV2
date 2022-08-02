@@ -1,4 +1,11 @@
-.features-row,.tours-row{
+.features-row{
     display: flex;
+    justify-content: space-evenly;
+}
+
+.tours-row{
+    display: flex;
+    align-items: center;
+    margin-left: -35rem;
     justify-content: space-evenly;
 }
