@@ -282,6 +282,29 @@ body {
   transform: scale(0.9);
 }
 
+.feature-box {
+  flex: 0 0 20%;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+.feature-box__icon {
+  font-size: 6rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.feature-box:hover {
+  transform: translateY(-1.5rem) scale(1.04);
+}
+.feature-box__text {
+  margin-top: 1.5rem;
+}
+
 .row {
   max-width: 114rem;
   background-color: aqua;
@@ -302,7 +325,7 @@ body {
 /* Header */
 .header {
   height: 95vh; /* set the height to be 95% of viewport */
-  background-image: linear-gradient(150deg, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover; /* try to fit in the element of this box */
   background-position: top;
   position: relative; /*origin position for logo*/
@@ -329,6 +352,11 @@ body {
 }
 
 /* End Header */
+.features-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .section-about {
   display: flex;
   flex-direction: column;
@@ -349,4 +377,15 @@ body {
 }
 .heading__row-img {
   position: relative;
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+}
+.section-features > * {
+  transform: skewY(7deg);
 }
