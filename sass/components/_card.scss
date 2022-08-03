@@ -24,7 +24,7 @@
             transform: rotateY(180deg);
 
             &-1{
-                background-image: linear-gradient(to right bottom, $color-sencondary-light, $color-sencondary-dark);
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
             }
 
             &-2{
@@ -56,7 +56,7 @@
         border-top-right-radius: 3px;
 
         &--1{
-            background-image: linear-gradient(to right bottom, $color-sencondary-light, $color-sencondary-dark),url(../img/nat-5.jpg);
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),url(../img/nat-5.jpg);
         }
         &--2{
             background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),url(../img/nat-6.jpg);
@@ -85,8 +85,8 @@
 
         &--1{
             background-image: linear-gradient(to right bottom, 
-            rgba($color-sencondary-light,.85), 
-            rgba($color-sencondary-dark,.85));
+            rgba($color-secondary-light,.85), 
+            rgba($color-secondary-dark,.85));
         }
 
         &--2{
