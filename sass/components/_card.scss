@@ -52,15 +52,17 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
 
         &--1{
             background-image: linear-gradient(to right bottom, $color-sencondary-light, $color-sencondary-dark),url(../img/nat-5.jpg);
         }
         &--2{
-            background-image: url(../img/nat-6.jpg);
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),url(../img/nat-6.jpg);
         }
         &--3{
-            background-image: url(../img/nat-7.jpg);
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),url(../img/nat-7.jpg);
         }
     }
 
@@ -80,10 +82,23 @@
         padding: 1rem 1.5rem;
         -webkit-box-decoration-break: clone; //apply all the decoration to all boxes
         box-decoration-break: clone;
+
         &--1{
             background-image: linear-gradient(to right bottom, 
             rgba($color-sencondary-light,.85), 
             rgba($color-sencondary-dark,.85));
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-primary-light,.85), 
+            rgba($color-primary-dark,.85));
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-tertiary-light,.85), 
+            rgba($color-tertiary-dark,.85));
         }
     }
 
@@ -105,5 +120,29 @@
                 }
             }
         }
+    }
+
+    //Back side styling
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+
+    &__price-box{
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
