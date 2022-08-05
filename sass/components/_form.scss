@@ -4,7 +4,7 @@
     }
 
     &__group:not(:last-child){
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     &__input{
@@ -45,25 +45,6 @@
 
     }
 
-    &__group-lalala{
-        height: 20rem;
-        width: 100%;
-        background-color: aqua;
-    }
-
-    &__group-radio{
-        display: flex;
-    }
-
-    &__radio-group{
-
-    }
-
-    &__radio-label #small #large{
-        font-size: 4rem;
-        cursor: pointer;
-    }
-
     //use adjacent sibling
     //when placeholder is shown, the label will be disappear
     &__input:placeholder-shown + &__label{
@@ -72,5 +53,53 @@
         transform: translateY(-4rem);
     }
 
-    
+    &__group-radio{
+        display: flex;
+        justify-content: left;
+    }
+
+    &__radio-group{
+        padding-right: 2rem;
+    }
+
+    &__radio-input{
+        display: none;
+    }
+
+    &__radio-label{
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+
+    &__radio-button{
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: -.4rem;
+        left: 0;
+
+        &::after{
+            content: "";
+            height: 1.3rem;
+            width: 1.3rem;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after{
+        opacity: 1;
+    }
 }
