@@ -12,6 +12,11 @@ html{
     /*define 1rem font-size to 10px
     the user can zoom-in or out without changing the look of website*/
     font-size: 62.5%; 
+
+    //responsive
+    @include respond-phone{
+        font-size: 50%;
+    }
 }
 
 body{

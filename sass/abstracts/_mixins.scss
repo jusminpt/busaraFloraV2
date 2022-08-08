@@ -4,3 +4,17 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+
+//medai query manager
+/*
+0-600px : phone
+600-900px: taplet portrait
+900-1200px: taplet landscape
+1200-1800px: normal style apply
+1800px+ : big desktop
+*/
+
+@mixin respond-phone {
+    @media (max-width: 600px){@content};
+}

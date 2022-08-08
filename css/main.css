@@ -1,3 +1,10 @@
+/*
+0-600px : phone
+600-900px: taplet portrait
+900-1200px: taplet landscape
+1200-1800px: normal style apply
+1800px+ : big desktop
+*/
 /* reset : make it the same across platform */
 *,
 *::before,
@@ -12,6 +19,11 @@ html {
   /*define 1rem font-size to 10px
   the user can zoom-in or out without changing the look of website*/
   font-size: 62.5%;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
