@@ -6,6 +6,7 @@
     padding: 25rem 0;
     margin-top: -20vh;
 }
+
 .heading__row{
     display: flex;
     width: 100%;
@@ -20,6 +21,10 @@
     }
     &-img{
         position: relative;
+    }
+
+    @include respond(tab-port){
+        flex-direction: column;
     }
 }
 

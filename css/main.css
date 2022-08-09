@@ -5,6 +5,15 @@
 1200-1800px: normal style apply
 1800px+ : big desktop
 */
+/*
+$breakpoint arguement
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+order : base+typography > general latout + flex display > page layout > components
+*/
 /* reset : make it the same across platform */
 *,
 *::before,
@@ -20,14 +29,30 @@ html {
   the user can zoom-in or out without changing the look of website*/
   font-size: 62.5%;
 }
-@media (max-width: 600px) {
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
   html {
     font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
   }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 /* End reset */
@@ -121,7 +146,6 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -143,6 +167,12 @@ body {
   /* animation-delay: 2s; */
   /* animation-iteration-count: 3; */
 }
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-size: 4.5rem;
+  }
+}
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -155,6 +185,11 @@ body {
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+}
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -169,6 +204,16 @@ body {
   letter-spacing: 2px;
   transition: all 0.2s;
   margin-bottom: 8rem;
+}
+@media (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
 .heading-secondary:hover {
   transform: skewY(-2deg) skewX(15deg) scale(1.1);
@@ -830,23 +875,6 @@ body {
   transform: rotate(-135deg);
 }
 
-.row {
-  max-width: 114rem;
-  background-color: aqua;
-  margin: 0 auto;
-}
-.row:not(:last-child) {
-  margin-bottom: 8rem;
-}
-.row .col-1-of-2 {
-  width: calc((100%-6rem) / 2);
-  background-color: red;
-  float: left;
-}
-.row .col-1-of-2:not(:last-child) {
-  margin-right: 6rem;
-}
-
 /* Header */
 .header {
   height: 95vh; /* set the height to be 95% of viewport */
@@ -963,6 +991,11 @@ body {
 }
 .heading__row-img {
   position: relative;
+}
+@media (max-width: 56.25em) {
+  .heading__row {
+    flex-direction: column;
+  }
 }
 
 .section-features {
