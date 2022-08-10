@@ -146,5 +146,8 @@
         font-weight: 100;
     }
 
+    @include respond(tab-port){
+        margin-bottom: $margin-bottom-medium;
+    }
     
 }

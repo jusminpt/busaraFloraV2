@@ -20,5 +20,9 @@
     &__text{
         margin-top: $margin-bottom-small;
     }
+
+    @include respond(tab-port){
+        margin-bottom: $margin-bottom-medium;
+    }
 }
 

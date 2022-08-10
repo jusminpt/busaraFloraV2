@@ -67,10 +67,25 @@
         padding-left: 10rem;
     }
 
-}
+    @include respond(phone){
+        padding: 6rem 0;
 
-// hr {
-//     border: 1px solid $color-grey-dark;
-//     margin-bottom: 2rem;
-//     display: inline-block;
-// }
+        &__logo-box{
+            margin-bottom: $margin-bottom-medium;
+        }
+
+        &__row{
+            width: 70%;
+            flex-direction: column;
+        }
+
+        &__copyright{
+            flex: 0 0 5rem;
+            padding: 4rem 4rem;
+        }
+    
+        &__navigation{
+            margin: 0 auto;
+        }
+    }
+}

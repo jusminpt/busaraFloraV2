@@ -1,6 +1,12 @@
 .features-row{
     display: flex;
     justify-content: space-evenly;
+
+    @include respond(tab-port){
+        flex-direction: column;
+        margin: 0 auto;
+        width: 50%;
+    }
 }
 
 .tours-row{
@@ -8,4 +14,8 @@
     align-items: center;
     margin-left: -35rem;
     justify-content: space-evenly;
+
+    @include respond(tab-port){
+        flex-direction: column;
+    }
 }
