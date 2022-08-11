@@ -8,4 +8,9 @@
     }
 }
 
-.u-margin-top-big{margin-top: 8rem;}
+.u-margin-top-big{
+    margin-top: 8rem;
+    @include respond(phone){
+        margin-top: 3rem !important;
+    }
+}

@@ -24,6 +24,10 @@
         display: block;
         transition: all .3s;
 
+        @include respond(phone){
+            width: 100%;
+        }
+
         &:focus{
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
@@ -60,10 +64,21 @@
     &__group-radio{
         display: flex;
         justify-content: left;
+
+        @include respond(phone){
+            display: inline-block;
+        }
     }
 
     &__radio-group{
         padding-right: 2rem;
+
+        @include respond(phone){
+            float: left;
+            &:not(:last-child){
+                padding-bottom: 2rem;
+            }
+        }
     }
 
     &__radio-input{

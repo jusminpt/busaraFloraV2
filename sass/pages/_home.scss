@@ -7,12 +7,21 @@
     margin-top: -20vh;
     
     @include respond(tab-port){
-        padding: 35rem 0 15rem;
+        padding: 20rem 0 15rem 0;
     }
 
     @include respond(phone){
+        padding: 10rem 0 23rem 0;
         margin-top: -10vh;
         margin-bottom: 10rem;
+        
+        h2{
+            text-align: center;
+        }
+
+        a.btn-text{
+            margin-bottom: $margin-bottom-medium;
+        }
     }
 }
 
@@ -33,6 +42,10 @@
 
     &-img{
         position: relative;
+
+        @include respond(phone){
+            // flex-direction: row;
+        }
     }
 }
 
@@ -56,6 +69,11 @@
     @include respond(tab-port){
         padding: 15rem 0 10rem 0;
     }
+
+    @include respond(phone){
+        margin-top: -15rem;
+        padding: 10rem 0;
+    }
 }
 
 .section-tours{
@@ -66,6 +84,10 @@
 
     @include respond(tab-port){
         padding: 20rem 0 10rem 0;
+    }
+
+    @include respond(phone){
+        
     }
 }
 
@@ -99,7 +121,6 @@
     background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-    height: 50rem;
 
     &__form{
         width: 60%;
@@ -112,6 +133,18 @@
         rgba($color-white, .9) 55%,
         transparent 55%),
         url(../img/nat-10.jpg);
+    }
+
+    @include respond(phone){
+        background-image: linear-gradient( 
+        rgba($color-white, .9) 100%,
+        transparent 100%),
+        url(../img/nat-10.jpg);
+
+        &__form{
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 
