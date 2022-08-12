@@ -22,11 +22,24 @@
         opacity: 0;
         transform:translate(-50%,-50%) scale(.25);
         transition: all .4s .2s;
+
+        @include respond(phone){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__left{
         width: 33.333333%;
         display: table-cell;
+
+        @include respond(phone){
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+        }
     }
 
     &__right{
@@ -39,11 +52,34 @@
             margin-top: -8rem;
             margin-bottom: 2rem;
         }
+
+        @include respond(phone){
+            h2{
+                font-size: 2rem;
+            }
+            h3{
+                font-size: 1.3rem;
+                margin-top:.5rem;
+                margin-bottom: 2rem;
+            }
+            a.btn.btn--green{
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
     }
 
     &__img{
         display: block;
         width: 100%;
+        @include respond(tab-land){
+            padding: 3rem 0 3rem 3rem;
+        }
+        @include respond(phone){
+            width: 50%;
+            padding: 0;
+        }
     }
 
     &__text{
@@ -63,6 +99,16 @@
         -ms--hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(phone){
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+
+        //make a column of paragraph
+        -moz-column-count: unset;
+
+        column-count: unset;
+        }
     }
 
     //open state

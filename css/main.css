@@ -844,9 +844,24 @@ body {
   transform: translate(-50%, -50%) scale(0.25);
   transition: all 0.4s 0.2s;
 }
+@media (max-width: 37.5em) {
+  .popup__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .popup__left {
   width: 33.333333%;
   display: table-cell;
+}
+@media (max-width: 37.5em) {
+  .popup__left {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .popup__right {
   width: 66.666667%;
@@ -858,9 +873,35 @@ body {
   margin-top: -8rem;
   margin-bottom: 2rem;
 }
+@media (max-width: 37.5em) {
+  .popup__right h2 {
+    font-size: 2rem;
+  }
+  .popup__right h3 {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .popup__right a.btn.btn--green {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 .popup__img {
   display: block;
   width: 100%;
+}
+@media (max-width: 75em) {
+  .popup__img {
+    padding: 3rem 0 3rem 3rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .popup__img {
+    width: 50%;
+    padding: 0;
+  }
 }
 .popup__text {
   font-size: 1.4rem;
@@ -876,6 +917,14 @@ body {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
       hyphens: auto;
+}
+@media (max-width: 37.5em) {
+  .popup__text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    -moz-column-count: unset;
+    column-count: unset;
+  }
 }
 .popup:target {
   opacity: 1;
@@ -1044,13 +1093,18 @@ body {
 /* Header */
 .header {
   height: 95vh; /* set the height to be 95% of viewport */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   background-size: cover; /* try to fit in the element of this box */
   background-position: top;
   position: relative; /*origin position for logo*/
   /* clip the img*/
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*define 4 conner of img(x y axis)*/
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  .header {
+    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  }
 }
 @media (max-width: 56.25em) {
   .header {
