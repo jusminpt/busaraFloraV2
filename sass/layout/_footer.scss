@@ -1,8 +1,8 @@
 .footer{
-    background-color: $color-grey-dark-3;
+    background-color: $color-grey-light-1;
     padding: 10rem 0;
     font-size: 1.4rem;
-    color: $color-grey-light-1;
+    color: $color-grey-dark;
 
     &__logo-box{
         text-align: center;
@@ -47,8 +47,8 @@
     &__link{
         &:link,
         &:visited{
-            color: $color-grey-light-1;
-            background-color: $color-grey-dark-3;
+            color: $color-grey-dark;
+            background-color: $color-grey-light-1;
             text-decoration: none;
             text-transform: uppercase;
             display: inline-block;
@@ -58,7 +58,7 @@
         &:hover,
         &:active{
             color: $color-primary;
-            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
             transform: rotate(3deg) scale(1.3);
         }
     }
