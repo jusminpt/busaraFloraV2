@@ -346,6 +346,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 37.5em) {
+  .composition {
+    margin-bottom: 2rem;
+  }
+}
 .composition__photo {
   width: 55%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
@@ -362,26 +367,28 @@ body {
   }
 }
 .composition__photo--p1 {
-  left: 0;
+  left: -10rem;
   top: -2rem;
 }
 @media (max-width: 37.5em) {
   .composition__photo--p1 {
-    top: 1rem;
+    top: 0rem;
+    left: 1rem;
   }
 }
 .composition__photo--p2 {
-  right: 0;
-  top: 2rem;
+  right: -10rem;
+  top: -2rem;
 }
 @media (max-width: 37.5em) {
   .composition__photo--p2 {
     top: 0rem;
+    right: 1rem;
   }
 }
 .composition__photo--p3 {
-  left: 20%;
-  top: 10rem;
+  left: 25%;
+  top: 3rem;
 }
 @media (max-width: 37.5em) {
   .composition__photo--p3 {
