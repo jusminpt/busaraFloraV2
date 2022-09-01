@@ -1324,7 +1324,7 @@ body {
 }
 
 .section-book {
-  padding: 15rem 0 0 12rem;
+  padding-top: 15rem;
   background-image: linear-gradient(to right bottom, #e3b9b8, #e5958f);
 }
 @media (max-width: 56.25em) {

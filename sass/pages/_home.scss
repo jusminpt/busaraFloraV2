@@ -102,7 +102,7 @@
 }
 
 .section-book{
-    padding: 15rem 0 0 12rem;
+    padding-top: 15rem;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
     @include respond(tab-port){
