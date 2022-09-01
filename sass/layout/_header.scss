@@ -1,12 +1,12 @@
 /* Header */
 .header{
     height: 95vh; /* set the height to be 95% of viewport */
-    // background-image: linear-gradient(
-    //     to right bottom,
-    //     rgba($color-primary-light, 0.8),
-    //     rgba($color-primary-dark, 0.8)),
-    //     url(../img/wedding-small.jpg);
-        background-image: url(../img/wedding-small.jpg);
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url(../img/wedding-small.jpg);
+        // background-image: url(../img/wedding-small.jpg);
     background-size: cover; /* try to fit in the element of this box */
     background-position: top;
     position: relative; /*origin position for logo*/
@@ -44,7 +44,7 @@
     &__text-box{
         position: absolute;
         /* relative with parent */
-        top:40%;
+        top:50%;
         left:50%;
         /* not relative with parent */
         transform: translate(-50%,-50%); /*this will shift the text itself, not from the position*/

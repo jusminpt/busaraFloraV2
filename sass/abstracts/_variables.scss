@@ -1,15 +1,15 @@
 //color
-$color-primary : #fb988d;
-$color-primary-light : #fed9d5;
-$color-primary-dark : #e9967a;
+$color-primary : #fb9790;
+$color-primary-light : #e3b9b8;
+$color-primary-dark : #e5958f;
 
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
+$color-secondary-light:  #9bd6d6;
+$color-secondary-dark:  #679191;
 
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
+$color-tertiary-light: #c4c1e0;
+$color-tertiary-dark: #9189ec;
 
-$color-grey-light-1: #fbf0e1;
+$color-grey-light-1: #fff1e6;
 $color-grey-light-2:#eee;
 
 $color-grey-dark:#777;
@@ -18,6 +18,11 @@ $color-grey-dark-3:#333;
 
 $color-white:#fff;
 $color-black:#000;
+
+
+//font-family
+$default-font:'Lato', sans-serif;
+$heading-font:'Libre Baskerville', serif;
 
 //font-size
 $default-font-size: 1.6rem;

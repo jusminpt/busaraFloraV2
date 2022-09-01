@@ -115,7 +115,7 @@
     rgba($color-white, .9) 0%,
     rgba($color-white, .9) 50%,
     transparent 50%),
-    url(../img/nat-10.jpg);
+    url(../img/mix-1.png);
     margin: 0 auto;
     width: 70%;
     background-size: cover;
@@ -127,19 +127,23 @@
         padding: 6rem;
     }
 
+    &__logo-bottom{
+        margin: 0 auto;
+    }
+
     @include respond(tab-port){
         background-image: linear-gradient(105deg, 
         rgba($color-white, .9) 0%,
         rgba($color-white, .9) 55%,
         transparent 55%),
-        url(../img/nat-10.jpg);
+        url(../img/mix-1.png);
     }
 
     @include respond(phone){
         background-image: linear-gradient( 
         rgba($color-white, .9) 100%,
         transparent 100%),
-        url(../img/nat-10.jpg);
+        url(../img/mix-1.png);
 
         &__form{
             text-align: center;

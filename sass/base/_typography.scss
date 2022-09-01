@@ -1,5 +1,5 @@
 body{
-    font-family: "Lato", sans-serif;
+    font-family: $default-font;
     font-weight: 400;
     /* font-size: 16px; */
     line-height: 1.7;
@@ -7,7 +7,7 @@ body{
 }
 
 .heading-primary{
-    color: $color-white;
+    color: $color-black;
     text-transform: uppercase;
     margin-bottom: 6rem;
 
@@ -17,9 +17,10 @@ body{
 
     &--main{
         display: block;
-        font-size: 6rem;
+        font-family: $heading-font;
+        font-size: 4.5rem;
         font-weight: 700;
-        letter-spacing: 3rem;
+        letter-spacing: 2.5rem;
     
         /* add animation */
         animation: moveInLeft 1s ease-out;
@@ -29,7 +30,7 @@ body{
 
         @include respond(phone){
             letter-spacing: 1rem;
-            font-size: 4.5rem;
+            font-size: 2.5rem;
         }
     }
     
@@ -37,7 +38,7 @@ body{
         display: block;
         font-size: 2rem;
         font-weight: 400;
-        letter-spacing: 1.75rem;
+        letter-spacing: 1.25rem;
     
         /* add animation */
         animation-name: moveInRight;
@@ -46,18 +47,19 @@ body{
 
         @include respond(phone){
             letter-spacing: .5rem;
-            font-size: 1.8rem;
+            font-size: 1.2rem;
         }
     }
 }
 
 .heading-secondary{
     margin: 0 auto;
+    font-family: $heading-font;
     font-size: 3.5rem;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-weight: 700;
     display: inline-block;
-    background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+    background-image: linear-gradient(to right, $color-grey-dark,$color-grey-dark-3);
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 2px;
