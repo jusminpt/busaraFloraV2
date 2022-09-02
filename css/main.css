@@ -571,12 +571,15 @@ body {
   }
   .card__side--back {
     transform: rotateY(0);
-    margin-top: 47rem;
+    margin-top: 39.5rem;
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   }
   .card:hover .card__side--front {
     transform: rotateY(0);
+  }
+  .card__details {
+    padding-top: 0;
   }
   .card__cta {
     position: relative;
@@ -1168,6 +1171,34 @@ body {
   }
 }
 
+.grid-container {
+  display: grid;
+  gap: 2rem 2rem;
+  grid-template-columns: auto auto auto auto;
+  padding: 5rem 15rem 0 15rem;
+}
+
+.grid-item {
+  width: 100%;
+  height: 20rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.feature__link {
+  text-transform: lowercase;
+  font-family: "Libre Baskerville", serif;
+}
+.feature__link a {
+  color: #eee;
+}
+.feature__link em {
+  font-style: italic;
+}
+.feature__link em:hover {
+  color: #fff;
+}
+
 .footer {
   background-color: #fff1e6;
   padding: 10rem 0;
@@ -1288,7 +1319,7 @@ body {
 }
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(227, 185, 184, 0.8), rgba(229, 149, 143, 0.8)), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, #e3b9b8, #e5958f);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem;
