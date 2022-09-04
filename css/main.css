@@ -1178,6 +1178,23 @@ body {
   grid-gap: 1.5rem;
   padding: 5rem 15rem;
 }
+@media (max-width: 75em) {
+  .grid-container {
+    grid-template-rows: repeat(2, 19vw);
+  }
+}
+@media (max-width: 56.25em) {
+  .grid-container {
+    grid-template-rows: repeat(2, 22vw);
+  }
+}
+@media (max-width: 37.5em) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 33vw);
+    grid-gap: 2rem;
+  }
+}
 
 .grid-item {
   width: 100%;
