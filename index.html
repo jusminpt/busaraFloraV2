@@ -2,15 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Font -->
+    <link rel="stylesheet" href="css/icon-font.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Ubuntu&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/icon-font.css" />
+    
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" type="image/png" href="img/logo-icon.png" />
 
@@ -26,11 +31,10 @@
       <div class="navigation__bg">&nbsp;</div>
       <nav class="navigation__nav">
         <ul class="navigation__list">
-          <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About us</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benfits</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Services</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Kind words</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+          <li class="navigation__item"><a href="#about" class="navigation__link"><span>01</span>About us</a></li>
+          <li class="navigation__item"><a href="#services" class="navigation__link"><span>02</span>Services</a></li>
+          <li class="navigation__item"><a href="#stories" class="navigation__link"><span>03</span>Stories</a></li>
+          <li class="navigation__item"><a href="#book" class="navigation__link"><span>04</span>Book now</a></li>
         </ul>
       </nav>
     </div>
@@ -46,14 +50,14 @@
           <span class="heading-primary--main">busara <i>flora</i></span>
           <span class="heading-primary--sub">Base in seattle,WA</span>
         </h1>
-        <a href="#section-tours" class="btn btn--white btn--animated">Discover our services</a>
+        <a href="#services" class="btn btn--white btn--animated">Discover our services</a>
       </div>
     </header>
     <!-- ==================== End Header ======================= -->
 
     <!-- ==================== Main ======================= -->
     <main>
-      <section class="section-about">
+      <section class="section-about" id="about">
         <h2 class="heading-secondary">
           About us
         </h2>
@@ -123,11 +127,11 @@
         </div>
       </section>
       
-      <section class="section-tours" id="section-tours">
+      <section class="section-services" id="services">
         <h2 class="heading-secondary">
           types of service
         </h2>
-        <div class="tours-row">
+        <div class="service-row">
             <div class="card">
               <div class="card__side card__side--front">
                 <div class="card__photo card__photo--1">
@@ -151,7 +155,7 @@
                     <p class="card__price-only">Starting at</p>
                     <p class="card__price-value">$8,500+</p>
                   </div>
-                  <a href="#popup" class="btn btn--white">Book now!</a>
+                  <a href="#book" class="btn btn--white">Book now!</a>
                 </div>
               </div>
           </div>
@@ -179,7 +183,7 @@
                       <p class="card__price-only">Starting at</p>
                       <p class="card__price-value">$1,500+</p>
                     </div>
-                    <a href="#popup" class="btn btn--white">Book now!</a>
+                    <a href="#book" class="btn btn--white">Book now!</a>
                   </div>
                 </div>
             </div>
@@ -208,16 +212,16 @@
                       <p class="card__price-only">Starting at</p>
                       <p class="card__price-value">$599+</p>
                     </div>
-                    <a href="#popup" class="btn btn--white">Book now!</a>
+                    <a href="#book" class="btn btn--white">Book now!</a>
                   </div>
                 </div>
               </div>
           </div>
         </div>
-        <a href="https://www.instagram.com/busara.flora/" class="btn btn--green u-margin-top-big">Discover our works</a>
+        <a href="https://www.instagram.com/busara.flora/" class="btn btn--pink u-margin-top-big">Discover our works</a>
       </section>
 
-      <section class="section-stories">
+      <section class="section-stories" id="stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/flower-shop.mp4" type="video/mp4">
@@ -258,7 +262,7 @@
           </div>
         </div>
         <div class="u-center-text">
-          <a href="#" class="btn-text">Read all story &rarr;</a>
+          <a href="#popup" class="btn-text">Read all story &rarr;</a>
         </div>
       </section>
 
@@ -295,7 +299,7 @@
                   </div>
                 </div>
                 <div class="form__group">
-                  <button class="btn btn--green">Next step &rarr;</button>
+                  <button class="btn btn--pink">Next step &rarr;</button>
                 </div>
               </form>
             </div>
@@ -310,23 +314,55 @@
     <!-- ==================== Pop up ======================= -->
     <div class="popup" id="popup">
       <div class="popup__content">
-        <div class="popup__left">
-          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+        <a href="#header"><img src="./img/logo.png" alt="Logo" class="popup__logo logo" /></a>
+        <a href="#section-tours" class="popup__close">&times;</a>
+        <div class="popup__content-carousel">
+          <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/customer-3.JPG" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Minji & Ethan</h5>
+                  <p>“We gave Tanya a vision, and she designed it to perfection!!!”</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/customer-4.JPG" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Courtney & Andy</h5>
+                  <p>“It was truly a pleasure working with you!”</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/customer-5.JPG" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Jamie & Troy</h5>
+                  <p>“her designs and arrangements just blew me away!”</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-        <div class="popup__right">
-          <a href="#section-tours" class="popup__close">&times;</a>
-          <h2 class="heading-secondary">Start booking now</h2>
-          <h3 class="heading-tertiary">Important &ndash; Please read this term berfore booking</h3>
-          <p class="popup__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, atque labore provident, optio voluptatum quaerat distinctio commodi illo amet excepturi placeat tenetur enim possimus aut. Quae error consequuntur sequi dolores.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde fugiat, laboriosam nihil, a illum voluptatem molestiae ipsa necessitatibus ad molestias quod veritatis consequuntur alias recusandae dolores libero! Voluptates, deserunt quasi.
-          </p>
-          <a href="#" class="btn btn--green">Book now</a>
-        </div>
+        <a href="https://www.instagram.com/busara.flora/" class="btn btn--pink popup__btn">Discover our works</a>
       </div>
     </div>
     <!-- ==================== End Pop up ======================= -->
 
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </body>
 </html>
