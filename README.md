@@ -10,7 +10,7 @@
 <!-- ABOUT THE PROJECT -->
 ## :memo: About The Project
 
-<p>A website for a local florist with a clean design and accessible for all devices. I first created this website 2 years ago as a trial version 
+<p> This project is dedicated to a website that I designed  for a local florist; offering simple and clean design that accessible for all devices. I first created this website 2 years ago as a trial version 
 for my cousin who is the flower shop owner. Her clients are mostly online base, so I think it must be nice to create a website that can showcase 
 all her work and services.</p>
 
