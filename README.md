@@ -11,7 +11,7 @@
 ## :memo: About The Project
 
 <p> This project is dedicated to a website that I designed  for a local florist; offering simple and clean design that accessible for all devices. I first created this website 2 years ago as a trial version 
-for my cousin who is the flower shop owner. Her clients are mostly online base, so I think it must be nice to create a website that can showcase 
+for my cousin who is the owner of the flower shop. Her clients are mostly online base, so I think it must be nice to create a website that can showcase 
 all her work and services.</p>
 
 <p>This project means a lot to me as it's the very first website that I've created. I've linked the first version of this website below, 
